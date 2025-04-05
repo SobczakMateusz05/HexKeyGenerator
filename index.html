@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Key Generator</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h1>Hex Key Generator</h1>
+        <h2>API Key</h2>
+        <div class="buttonContainer">
+            <button class="button" onclick="generateApiKey(16)">
+                32 Chars
+            </button>
+            <button class="button" onclick="generateApiKey(32)">
+                64 Chars
+            </button>
+        </div>
+        <h2>Secret Key</h2>
+        <div class="buttonContainer">
+            <button class="button" onclick="generateKey(128)">128 Chars</button>
+            <button class="button" onclick="generateKey(256)">256 Chars</button>
+            <button class="button" onclick="generateKey(512)">512 Chars</button>
+        </div>
+        <div class="customLengthContainer">
+            <input type="number" id="customLength" />
+            <button class="button" onclick="generateKey(0)">
+                Generate Key
+            </button>
+        </div>
+
+        <div class="keyContainer">
+            <div class="copyContainer">
+                <p id="copyText"></p>
+                <button onclick="copyText()">Copy</button>
+            </div>
+            <p id="key"></p>
+        </div>
+    </body>
+</html>
